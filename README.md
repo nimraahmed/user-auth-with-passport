@@ -1,6 +1,6 @@
 ## About this repo
 
-The purpose of this repo is to explore two passport strategies: Passport Local & Passport JWT. To fully understand JWT, it's important to get a good understanding of cryptography (implemented & explained in the cryptography directory).
+The purpose of this repo is to explore two passport strategies: Passport Local & Passport JWT. To fully understand JWT, it's important to get a good understanding of cryptography (implemented & explained in the cryptography directory) & the role it plays in the JWT signature.
 
 ## A few important notes
 
