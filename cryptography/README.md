@@ -13,4 +13,8 @@ This is a one-way function (like a sha-256 hash function) that takes a big piece
 
 The trap-door function used for public key cryptography is something called elliptic curve multiplication which mathematically links the public and private keys. So using the private key, you can drive the public key, but with the public key, you can't get back to the private key, allowing us to share the public key with anyone and use it for encryption and verification.
 
-The signing and verificatiob processes implemented in this repo are exactly what JWT uses under the hood. Large packets of data transferred over the net can slow down searches; a much easier way to do it is by compressing it into a much smaller form, i.e., JWT.
+The signing and verification processes implemented in this repo are exactly what JWT uses under the hood. Large packets of data transferred over the net can slow down searches; a much easier way to do it is by compressing it into a much smaller form, i.e., JWT.
+
+### To run the app
+
+First run `node createKeyPair.js` to create your public and private key. Then run `main.js` for data encryption and `verifyIdentity.js` for verification.
