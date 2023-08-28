@@ -1,17 +1,14 @@
 const mongoose = require("mongoose");
 const router = require("express").Router();
 const User = mongoose.model("User");
-const passport = require("passport");
+// const passport = require("passport");
 const utils = require("../lib/utils");
 
 // TODO
-router.get(
-  "/protected",
-  passport.authenticate("jwt", { session: false }),
-  (req, res, next) => {
-    res.status(200).json({ success: true, msg: "You are authorized" });
-  }
-);
+router.get("/protected", utils.authMiddleware, (req, res, next) => {
+  console.log(req.jwt);
+  res.status(200).json({ success: true, msg: "You are authorized" });
+});
 
 router.post("/login", function (req, res, next) {
   User.findOne({ username: req.body.username })
